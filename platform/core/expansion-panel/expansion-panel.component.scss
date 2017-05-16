@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  .td-expansion-panel {
+    transition: 400ms all ease;
+    .td-expansion-panel-header {
+      position: relative;
+      outline: none;
+      &:focus,
+      &:hover {
+        cursor: pointer;
+      }
+      &.mat-disabled {
+        background: none;
+        cursor: auto;
+      }
+      .td-expansion-panel-header-content {
+        height: 48px;
+        padding: 0 16px;
+      }
+    }
+  }
+}
+
+.td-expansion-label,
+.td-expansion-sublabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+  /deep/ [dir='rtl'] & { 
+    margin-left: 5px;
+    margin-right: inherit;
+  }
+}
